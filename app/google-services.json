@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "210667302365",
+    "project_id": "valentine-s-garage-e74f2",
+    "storage_bucket": "valentine-s-garage-e74f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:210667302365:android:84b97222654a2b0cf89a34",
+        "android_client_info": {
+          "package_name": "com.example.valentinesgarage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "210667302365-rm80fj3a6e2hco1kulud7sc91uc0eobs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.valentinesgarage",
+            "certificate_hash": "a52e5cbb2e769c3f0f989290c1244b816d2f36e5"
+          }
+        },
+        {
+          "client_id": "210667302365-ehvtonucrlv2mg2ammrmnpgk8sa4t246.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB57PszgcL5911_nDklRZmzr3K1fAk8etg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "210667302365-ehvtonucrlv2mg2ammrmnpgk8sa4t246.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

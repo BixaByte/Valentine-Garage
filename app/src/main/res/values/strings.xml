@@ -1,3 +1,53 @@
 <resources>
+    <!--Login Page-->
     <string name="app_name">Valentine\'s Garage</string>
+    <string name="msg_welcome">Welcome to your personal task manager!</string>
+    <string name="msg_login">Login into your Account</string>
+    <string name="btn_member">Member</string>
+    <string name="btn_admin">Admin</string>
+    <string name="tv_phone">Cellphone Number:</string>
+    <string name="et_phone">0812223333</string>
+    <string name="tv_password">Password:</string>
+    <string name="btn_login">Login</string>
+    <string name="tv_register"><u>Create new user account</u></string>
+    <string name="tv_role">Log in as:</string>
+
+    <!--Register Page-->
+    <string name="tv_regTitle">Enter the following information to Register</string>
+    <string name="tv_select_role">Select Role:</string>
+    <string name="tv_fname">First Name</string>
+    <string name="tv_lname">Last Name</string>
+    <string name="tv_dob">Date of Birth</string>
+    <string name="tv_dep">Department</string>
+    <string name="tv_email2">Email address</string>
+    <string name="tv_phone2">Cellphone Number</string>
+    <string name="tv_password2">Password</string>
+
+    <!--Admin and User Dashboard-->
+    <string name="tv_dashboard"><u>Dashboard</u></string>
+    <string name="task_dash">Tasks</string>
+    <string name="job_dash">Job</string>
+    <string name="report_dash">Report</string>
+    <string name="user_dash">User</string>
+    <string name="task_msg1">&#8226;   <u>View assigned tasks</u></string>
+    <string name="task_msg2">&#8226;   <u>Mark completed tasks</u></string>
+    <string name="task_msg3">&#8226;   <u>Add comments</u></string>
+    <string name="job_msg1">&#8226;   <u>Add new Jobs</u></string>
+    <string name="job_msg2">&#8226;   <u>Modify existing Jobs</u></string>
+    <string name="job_msg3">&#8226;   <u>Remove Jobs</u></string>
+    <string name="report_msg1">&#8226;   <u>View all tasks done by employees</u></string>
+    <string name="user_msg1">&#8226;   <u>View all members in company</u></string>
+    <string name="btn_logout">Logout</string>
+    <string name="btn_register">Register</string>
+    <string name="tv_name">Full name</string>
+    <string name="toolbar_task"><u>Task</u></string>
+    <string name="toolbar_job"><u>Job</u></string>
+    <string name="toolbar_report"><u>Reports</u></string>
+    <string name="toolbar_user"><u>Users</u></string>
+    <string name="toolbar_profile"><u>Profile</u></string>
+    <string name="filler_name">Name of user</string>
+    <string name="filler_role">Admin</string>
+    <string name="filler_dep">Electrical</string>
+    <string name="filler_no">1</string>
+
 </resources>

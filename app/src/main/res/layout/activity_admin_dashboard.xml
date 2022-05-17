@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".admin_dashboard"
+    android:background="@color/dark_purple"
+    >
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:text="@string/tv_dashboard"
+        android:textSize="32sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/tv_dashboard_title"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:paddingTop="10dp"
+        android:elevation="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/img_pfp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/profile_img" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/img_pfp"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="30dp"
+        android:text="Johnson"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl_task"
+        android:layout_width="330dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_username"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_taskDashA"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:text="@string/task_dash"
+            android:textSize="22sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:background="@android:color/transparent"
+
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_task"
+            android:layout_width="210dp"
+            android:layout_height="110dp"
+            android:layout_gravity="right"
+            android:background="@color/cyan">
+
+            <TextView
+                android:id="@+id/task_msg1"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_msg1"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/task_msg2"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_msg2"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/task_msg1"
+                />
+
+            <TextView
+                android:id="@+id/task_msg3"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_msg3"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/task_msg2"
+                />
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl_job"
+        android:layout_width="330dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cl_task"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp"
+        >
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_jobDashA"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/job_dash"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_job"
+            android:layout_width="210dp"
+            android:layout_height="110dp"
+            android:layout_gravity="right"
+            android:background="@color/cyan">
+
+            <TextView
+                android:id="@+id/job_msg1"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:text="@string/task_msg1"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:id="@+id/job_msg2"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:text="@string/job_msg2"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_below="@id/job_msg1"
+                />
+
+            <TextView
+                android:id="@+id/job_msg3"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/job_msg2"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="@string/job_msg3"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl_report"
+        android:layout_width="330dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cl_job"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_reportDashA"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/report_dash"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_report"
+            android:layout_width="210dp"
+            android:layout_height="110dp"
+            android:layout_gravity="right"
+            android:background="@color/cyan">
+
+            <TextView
+                android:id="@+id/report_msg1"
+                android:layout_width="210dp"
+                android:layout_height="110dp"
+                android:text="@string/report_msg1"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="fill"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="RtlCompat" />
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cl_user"
+        android:layout_width="330dp"
+        android:layout_height="110dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/cl_report"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="20dp">
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_userDashA"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/user_dash"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:background="@android:color/transparent"
+            />
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="210dp"
+            android:layout_height="110dp"
+            android:layout_gravity="right"
+            android:background="@color/cyan">
+
+            <TextView
+                android:id="@+id/user_msg1"
+                android:layout_width="210dp"
+                android:layout_height="110dp"
+                android:text="@string/user_msg1"
+                android:textColor="@color/white"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:gravity="fill"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="20dp"
+                tools:ignore="RtlCompat" />
+
+
+        </RelativeLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_logout"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_user"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/red_button"
+        android:text="@string/btn_logout"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+</RelativeLayout>
