@@ -18,7 +18,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Random;
 
 public class register extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
@@ -28,6 +32,7 @@ public class register extends AppCompatActivity {
     private boolean checked, valid;
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
+    private DatabaseReference mDatabase;
 
     private ProgressDialog loader;
 
@@ -38,6 +43,7 @@ public class register extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
         loader = new ProgressDialog(this);
 
         register = findViewById(R.id.btn_reg);
@@ -105,7 +111,9 @@ public class register extends AppCompatActivity {
                 String department_reg = department.getText().toString().trim();
                 String email_reg = email.getText().toString().trim();
                 String pass_reg = pass.getText().toString().trim();
-                String role = onRadioButtonClicked(v);
+                String member_reg = member.getText().toString().trim();
+                String admin_reg = admin.getText().toString().trim();
+
 
 
                 if (!checkField(firstName) || !checkField(surname) || !checkField(dob) || !checkField(dob) || !checkField(email) || !checkField(pass) || !checkField(email)) {
@@ -121,6 +129,7 @@ public class register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
+                                    writeNewUser(member_reg, dob_reg, department_reg, email_reg, firstName_reg, surname_reg, pass_reg );
                                     Intent intent = new Intent(register.this, member_dashboard.class);
                                     startActivity(intent);
                                     finish();
@@ -138,6 +147,7 @@ public class register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
+                                    writeNewUser(admin_reg, dob_reg, department_reg, email_reg, firstName_reg, surname_reg, pass_reg );
                                     Intent intent = new Intent(register.this, admin_dashboard.class);
                                     startActivity(intent);
                                     finish();
@@ -169,21 +179,12 @@ public class register extends AppCompatActivity {
         return valid;
     }
 
-    public String onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
+    public void writeNewUser(String access, String DOB, String department, String email, String first_Name, String surname, String password) {
+        Random ran = new Random();
+        int userId = ran.nextInt(50);
+        userData user = new userData(userId, access, email, DOB, department, first_Name, surname, password);
 
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.rb_member:
-                if (checked)
-                    return member.getText().toString().trim();
-                    break;
-            case R.id.rb_admin:
-                if (checked)
-                    return admin.getText().toString().trim();
-                    break;
-        }
-        return null;
+        mDatabase.child("users").child(String.valueOf(userId)).setValue(user);
     }
+
 }

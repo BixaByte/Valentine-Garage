@@ -3,7 +3,29 @@ package com.example.valentinesgarage;
 public class userData {
 
     private String Access, DOB, Department, Email, First_Name, Surname, Password;
+    private int userID;
+    public userData(){
+        //Default constructor
+    }
 
+    public userData(int id, String access, String DOB, String department, String email, String first_Name, String surname, String password) {
+        Access = access;
+        this.DOB = DOB;
+        Department = department;
+        Email = email;
+        First_Name = first_Name;
+        Surname = surname;
+        Password = password;
+        userID = id;
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
+    }
 
     public String getAccess() {
         return Access;

@@ -54,6 +54,32 @@ public class job extends AppCompatActivity {
 
 
         dashboard = findViewById(R.id.btn_job_db);
+        task = findViewById(R.id.btn_job_task);
+        user = findViewById(R.id.btn_job_user);
+        report = findViewById(R.id.btn_job_report);
+
+
+
+        dashboard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), admin_dashboard.class));
+            }
+        });
+
+        task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), tasks.class));
+            }
+        });
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), userList.class));
+            }
+        });
 
         dashboard.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -106,8 +132,8 @@ public class job extends AppCompatActivity {
         task_text = myView.findViewById(R.id.et_title_task);
         assign_text = myView.findViewById(R.id.et_title_assign);
 
-        cancel = findViewById(R.id.btn_cancel);
-        add = findViewById(R.id.btn_add);
+        cancel = myView.findViewById(R.id.btn_cancel);
+        add = myView.findViewById(R.id.btn_add);
 
         cancel.setOnClickListener((view -> {dialog.dismiss(); }));
 

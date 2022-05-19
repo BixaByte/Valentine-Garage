@@ -6,10 +6,13 @@ import androidx.appcompat.widget.AppCompatButton;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 
 public class admin_dashboard extends AppCompatActivity {
 
-    private AppCompatButton task, job, report, user;
+    private AppCompatButton task, job, report, user, logout;
+    private ImageButton img;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +20,10 @@ public class admin_dashboard extends AppCompatActivity {
 
         job = findViewById(R.id.btn_jobDashA);
         user = findViewById(R.id.btn_userDashA);
+        report = findViewById(R.id.btn_reportDashA);
+        task = findViewById(R.id.btn_taskDashA);
+        logout = findViewById(R.id.btn_logout);
+        img = findViewById(R.id.img_pfp);
 
         job.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,5 +38,36 @@ public class admin_dashboard extends AppCompatActivity {
                 startActivity(new Intent(getApplicationContext(), userList.class));
             }
         });
+
+        report.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), report.class));
+            }
+        });
+
+        task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), tasks.class));
+            }
+        });
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), login.class));
+            }
+        });
+
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), profile.class));
+            }
+        });
+
+
+
     }
 }
