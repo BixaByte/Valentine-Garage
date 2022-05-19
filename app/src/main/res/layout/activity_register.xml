@@ -98,22 +98,100 @@
                 </RadioGroup>
 
                 <TextView
-                    android:id="@+id/tv_name"
+                    android:id="@+id/tv_firstName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/rg_role2"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="5dp"
-                    android:text="@string/tv_name"
+                    android:text="@string/tv_fname"
                     android:textColor="@color/dark_grey"
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
                 <EditText
-                    android:id="@+id/et_name"
+                    android:id="@+id/et_firstName"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@id/tv_name"
+                    android:layout_below="@id/tv_firstName"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_input_fields"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_Surname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_firstName"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/surname"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_Surname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_Surname"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_input_fields"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_dob"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_Surname"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tv_dob"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_dob"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="false"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/text_input_fields"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textAlignment="center"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_dep"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/et_dob"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/tv_dep"
+                    android:textColor="@color/dark_grey"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/et_dep"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/tv_dep"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentEnd="false"
                     android:layout_marginTop="5dp"
@@ -127,7 +205,7 @@
                     android:id="@+id/tv_email2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/et_name"
+                    android:layout_below="@id/et_dep"
                     android:layout_alignParentLeft="true"
                     android:layout_marginTop="5dp"
                     android:text="@string/tv_email2"
@@ -148,7 +226,6 @@
                     android:inputType="text"
                     android:textAlignment="center"
                     android:textColor="@color/black" />
-
 
                 <TextView
                     android:id="@+id/tv_password2"
@@ -176,37 +253,11 @@
                     android:textAlignment="center"
                     android:textColor="@color/black" />
 
-                <TextView
-                    android:id="@+id/tv_phone2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/et_password2"
-                    android:layout_alignParentLeft="true"
-                    android:layout_marginTop="5dp"
-                    android:text="@string/tv_phone2"
-                    android:textColor="@color/dark_grey"
-                    android:textSize="18sp"
-                    android:textStyle="bold" />
-
-                <EditText
-                    android:id="@+id/et_phone2"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@id/tv_phone2"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentEnd="false"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/text_input_fields"
-                    android:ems="10"
-                    android:inputType="textPassword"
-                    android:textAlignment="center"
-                    android:textColor="@color/black" />
-
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_reg"
                     android:layout_width="120dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/et_phone2"
+                    android:layout_below="@id/et_password2"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="20dp"
                     android:layout_marginBottom="10dp"

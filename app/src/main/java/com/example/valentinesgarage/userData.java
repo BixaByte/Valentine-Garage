@@ -2,7 +2,8 @@ package com.example.valentinesgarage;
 
 public class userData {
 
-    String Access, Date_of_Birth, Department, Email, First_Name, Surname;
+    private String Access, DOB, Department, Email, First_Name, Surname, Password;
+
 
     public String getAccess() {
         return Access;
@@ -12,13 +13,6 @@ public class userData {
         Access = access;
     }
 
-    public String getDate_of_Birth() {
-        return Date_of_Birth;
-    }
-
-    public void setDate_of_Birth(String date_of_Birth) {
-        Date_of_Birth = date_of_Birth;
-    }
 
     public String getDepartment() {
         return Department;
@@ -52,21 +46,19 @@ public class userData {
         Surname = surname;
     }
 
+    public String getDOB() {
+        return DOB;
+    }
 
+    public void setDOB(String DOB) {
+        this.DOB = DOB;
+    }
+
+    public String getPassword() {
+        return Password;
+    }
+
+    public void setPassword(String password) {
+        Password = password;
+    }
 }
-
-/**
- Access
- "1"
- Date of Birth
- "Sep/11/1994"
- Department
- ""Electrical"
- (string)
- Email
- "admin1@gmail.com"
- First Name
- "admin1"
- Surname
- "test1"
- */

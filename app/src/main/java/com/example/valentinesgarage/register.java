@@ -3,39 +3,33 @@ package com.example.valentinesgarage;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.DatePicker;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
 
 import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserInfo;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 public class register extends AppCompatActivity {
     private DatePickerDialog datePickerDialog;
     private Button dateButton, register;
     private RadioButton member, admin;
-    private EditText name, phone, email, pass;
-    private boolean valid;
+    private EditText firstName, surname, phone, email, pass, department, dob;
+    private boolean checked, valid;
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
+
+    private ProgressDialog loader;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +38,22 @@ public class register extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
+        loader = new ProgressDialog(this);
 
         register = findViewById(R.id.btn_reg);
         member = findViewById(R.id.rb_member);
         admin = findViewById(R.id.rb_admin);
-        name = findViewById(R.id.et_name);
+        firstName = findViewById(R.id.et_firstName);
+        surname = findViewById(R.id.et_Surname);
         email = findViewById(R.id.et_email2);
         pass = findViewById(R.id.et_password2);
-        phone = findViewById(R.id.et_phone2);
+        department = findViewById(R.id.et_dep);
+        dob = findViewById(R.id.et_dob);
 
+        checked = ((RadioButton) member).isChecked();
 
-        register.setOnClickListener(new View.OnClickListener() {
+        /**
+       register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 checkField(name);
@@ -93,7 +92,67 @@ public class register extends AppCompatActivity {
                 }
             }
         });
+        */
 
+        register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                String firstName_reg = firstName.getText().toString().trim();
+                String surname_reg = surname.getText().toString().trim();
+                String dob_reg = dob.getText().toString().trim();
+                String department_reg = department.getText().toString().trim();
+                String email_reg = email.getText().toString().trim();
+                String pass_reg = pass.getText().toString().trim();
+                String role = onRadioButtonClicked(v);
+
+
+                if (!checkField(firstName) || !checkField(surname) || !checkField(dob) || !checkField(dob) || !checkField(email) || !checkField(pass) || !checkField(email)) {
+                    Toast.makeText(register.this, "Please fill in all fields.", Toast.LENGTH_SHORT).show();
+                } else {
+                    loader.setMessage("Registration in progress");
+                    loader.setCanceledOnTouchOutside(false);
+                    loader.show();
+
+                    if (member.isChecked()) {
+                        fAuth.createUserWithEmailAndPassword(email_reg, pass_reg).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                if (task.isSuccessful()) {
+                                    Intent intent = new Intent(register.this, member_dashboard.class);
+                                    startActivity(intent);
+                                    finish();
+                                    loader.dismiss();
+                                } else {
+                                    String error = task.getException().toString();
+                                    Toast.makeText(register.this, "Registration failed" + error, Toast.LENGTH_SHORT).show();
+                                    loader.dismiss();
+                                }
+                            }
+                        });
+                    } else if (admin.isChecked()) {
+                        fAuth.createUserWithEmailAndPassword(email_reg, pass_reg).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                            @Override
+                            public void onComplete(@NonNull Task<AuthResult> task) {
+
+                                if (task.isSuccessful()) {
+                                    Intent intent = new Intent(register.this, admin_dashboard.class);
+                                    startActivity(intent);
+                                    finish();
+                                    loader.dismiss();
+                                } else {
+                                    String error = task.getException().toString();
+                                    Toast.makeText(register.this, "Registration failed" + error, Toast.LENGTH_SHORT).show();
+                                    loader.dismiss();
+                                }
+                            }
+                        });
+                    }
+                }
+            }
+        });
 
     }
 
@@ -103,11 +162,28 @@ public class register extends AppCompatActivity {
     {
         if(txtField.getText().toString().isEmpty())
         {
-            txtField.setError("Error");
             valid = false;
         } else {
             valid = true;
         }
         return valid;
+    }
+
+    public String onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.rb_member:
+                if (checked)
+                    return member.getText().toString().trim();
+                    break;
+            case R.id.rb_admin:
+                if (checked)
+                    return admin.getText().toString().trim();
+                    break;
+        }
+        return null;
     }
 }

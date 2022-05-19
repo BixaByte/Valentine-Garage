@@ -1,56 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/toolbar"
-    android:elevation="4dp"
-    >
+    android:elevation="4dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_job_db"
+            android:id="@+id/btn_rpt_db"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
             android:text="@string/tv_dashboard"
             android:textColor="@color/white"
-            android:background="@android:color/transparent"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_job_task"
+            android:id="@+id/btn_rpt_task"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@id/btn_job_db"
+            android:layout_toRightOf="@id/btn_rpt_db"
             android:text="@string/toolbar_task"
             android:textColor="@color/white"
             android:background="@android:color/transparent"
             android:textStyle="bold"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_job_report"
+            android:id="@+id/btn_rpt_job"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@id/btn_job_task"
-            android:text="@string/toolbar_report"
-            android:textColor="@color/white"
+            android:layout_toRightOf="@id/btn_rpt_task"
             android:background="@android:color/transparent"
-            android:textStyle="bold"/>
+            android:text="@string/toolbar_job"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_job_user"
+            android:id="@+id/btn_rpt_user"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentRight="true"
-            android:layout_toRightOf="@id/btn_job_report"
+            android:layout_toRightOf="@id/btn_rpt_job"
             android:background="@android:color/transparent"
             android:text="@string/toolbar_user"
             android:textColor="@color/white"

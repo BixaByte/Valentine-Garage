@@ -16,11 +16,19 @@ public class admin_dashboard extends AppCompatActivity {
         setContentView(R.layout.activity_admin_dashboard);
 
         job = findViewById(R.id.btn_jobDashA);
+        user = findViewById(R.id.btn_userDashA);
 
         job.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), job.class));
+            }
+        });
+
+        user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), userList.class));
             }
         });
     }

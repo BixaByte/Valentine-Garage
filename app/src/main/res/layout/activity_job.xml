@@ -9,15 +9,40 @@
     android:background="@color/dark_purple">
 
     <include
-        android:id="@+id/toolbar"
+        android:id="@+id/job_toolbar"
         layout="@layout/toolbar_job"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello!!!!!"
+        android:text="No Available Jobs"
+        android:textColor="@color/faded_white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/job_toolbar"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:layout_marginTop="25dp"/>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_job"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add_black_24dp"
+            android:backgroundTint="@color/cyan"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
 </RelativeLayout>

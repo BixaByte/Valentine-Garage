@@ -50,4 +50,27 @@
     <string name="filler_dep">Electrical</string>
     <string name="filler_no">1</string>
 
+    <!--Profile-->
+    <string name="firstName">First Name:</string>
+    <string name="surname">Surname:</string>
+    <string name="DOB">DOB:</string>
+    <string name="upload_photo">Upload photo</string>
+    <string name="role">Role:</string>
+    <string name="department">Department:</string>
+    <string name="cellphone">Cellphone Number:</string>
+    <string name="email">Email:</string>
+
+    <!--Buttons-->
+    <string name="edit"><u>Edit</u></string>
+    <string name="Save"><u>Save</u></string>
+    <string name="Cancel"><u>Cancel</u></string>
+    <string name="delete"><u>Delete</u></string>
+    <string name="new_job"><u>New Job</u></string>
+    <string name="job"><u>Job:</u></string>
+    <string name="desc"><u>Description:</u></string>
+    <string name="task"><u>Task:</u></string>
+    <string name="assign"><u>Assign to:</u></string>
+    <string name="Add">Add</string>
+
+
 </resources>
