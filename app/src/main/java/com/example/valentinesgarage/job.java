@@ -38,7 +38,7 @@ public class job extends AppCompatActivity {
     private FloatingActionButton floatingActionButton;
     private TextView noJobs;
 
-    private EditText job_text, desc_text, task_text, assign_text;
+    private EditText client_text, desc_text, task_text, assign_text;
     private DatabaseReference reference;
     private FirebaseAuth mAuth;
     private FirebaseUser mUser;
@@ -127,7 +127,7 @@ public class job extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.show();
 
-        job_text = myView.findViewById(R.id.et_title_job);
+        client_text = myView.findViewById(R.id.et_title_client);
         desc_text = myView.findViewById(R.id.et_title_desc);
         task_text = myView.findViewById(R.id.et_title_task);
         assign_text = myView.findViewById(R.id.et_title_assign);
@@ -138,14 +138,14 @@ public class job extends AppCompatActivity {
         cancel.setOnClickListener((view -> {dialog.dismiss(); }));
 
         add.setOnClickListener((view -> {
-            String mjob_text = job_text.getText().toString().trim();
+            String mclient_text = client_text.getText().toString().trim();
             String mdesc_text = desc_text.getText().toString().trim();
             String mtask_text = task_text.getText().toString().trim();
             String massign_text = assign_text.getText().toString().trim();
             String id = reference.push().getKey();
             String date = DateFormat.getDateInstance().format(new Date());
-            if (TextUtils.isEmpty(mjob_text)){
-                job_text.setError("Job Required");
+            if (TextUtils.isEmpty(mclient_text)){
+                client_text.setError("Job Required");
                 return;
             }
             if (TextUtils.isEmpty(mtask_text)){
@@ -164,7 +164,7 @@ public class job extends AppCompatActivity {
                 loader.setCanceledOnTouchOutside(false);
                 loader.show();
 
-                Model model = new Model(mjob_text,mdesc_text, mtask_text, massign_text, id, date);
+                Model model = new Model(mclient_text,mdesc_text, mtask_text, massign_text, id, date);
                 reference.child(id).setValue(model).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

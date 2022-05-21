@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cl_task"
     android:layout_width="330dp"
-    android:layout_height="110dp"
+    android:layout_height="wrap_content"
     android:layout_centerHorizontal="true"
     android:layout_below="@id/tv_username"
     android:layout_marginTop="30dp"
@@ -19,36 +19,60 @@
         <RelativeLayout
             android:id="@+id/rl_info"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/cyan">
 
             <TextView
-                android:id="@+id/info_job"
+                android:id="@+id/info_client"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
                 android:gravity="left"
-                android:text="Job:"
+                android:text="Client"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/info_desc"
-                android:layout_width="210dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/info_job"
+                android:layout_below="@id/info_client"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
                 android:gravity="left"
-                android:text="Job Name"
+                android:text="Description"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/info_task"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_desc"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:gravity="left"
+                android:text="Job"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
-
+            <TextView
+                android:id="@+id/info_assign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_task"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                android:gravity="left"
+                android:text="Assigned to:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
 
         </RelativeLayout>

@@ -18,43 +18,44 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/job_desc_toolbar"
-        android:layout_marginTop="30dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:text="@string/new_job"
         android:textColor="@color/white"
         android:textSize="22sp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/title_job"
+        android:id="@+id/title_client"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/newJob"
         android:layout_marginStart="20dp"
         android:layout_marginTop="25dp"
-        android:text="@string/job"
+        android:text="Client:"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/et_title_job"
+        android:id="@+id/et_title_client"
         android:layout_width="360dp"
         android:layout_height="40dp"
-        android:layout_below="@id/title_job"
+        android:layout_below="@id/title_client"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/text_input_fields_white"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
 
     <TextView
         android:id="@+id/title_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/et_title_job"
+        android:layout_below="@id/et_title_client"
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:text="@string/desc"
@@ -66,13 +67,15 @@
     <EditText
         android:id="@+id/et_title_desc"
         android:layout_width="360dp"
-        android:layout_height="40dp"
+        android:layout_height="120dp"
         android:layout_below="@id/title_desc"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/text_input_fields_white"
-        android:inputType="text" />
+        android:inputType="textMultiLine"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
 
     <TextView
         android:id="@+id/title_task"
@@ -93,10 +96,12 @@
         android:layout_height="40dp"
         android:layout_below="@id/title_task"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/text_input_fields_white"
-        android:inputType="text" />
+        android:inputType="textMultiLine"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
 
     <TextView
         android:id="@+id/title_assign"
@@ -117,10 +122,12 @@
         android:layout_height="40dp"
         android:layout_below="@id/title_assign"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/text_input_fields_white"
-        android:inputType="text" />
+        android:inputType="text"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_cancel"
