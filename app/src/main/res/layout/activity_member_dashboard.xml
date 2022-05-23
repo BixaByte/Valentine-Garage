@@ -59,12 +59,12 @@
         app:cardElevation="20dp">
 
 
-        <TextView
-            android:id="@+id/tv_taskDash"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_taskDash"
             android:layout_width="120dp"
             android:layout_height="match_parent"
             android:text="@string/task_dash"
-            android:textSize="26sp"
+            android:textSize="22sp"
             android:textColor="@color/black"
             android:background="@color/white"
             android:textStyle="bold"

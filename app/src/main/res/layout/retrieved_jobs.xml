@@ -9,7 +9,9 @@
     android:layout_marginTop="30dp"
     app:cardCornerRadius="15dp"
     app:cardElevation="20dp"
-    android:layout_marginStart="40dp">
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -22,59 +24,267 @@
             android:layout_height="wrap_content"
             android:background="@color/cyan">
 
+
             <TextView
-                android:id="@+id/info_client"
+                android:id="@+id/edit_info_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:text="23 June 2000"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/title_info_client"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_date"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
                 android:gravity="left"
-                android:text="Client"
+                android:text="Client:"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/info_desc"
-                android:layout_width="match_parent"
+                android:id="@+id/edit_info_client"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/info_client"
+                android:layout_below="@id/edit_info_date"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_client"
+                android:gravity="left"
+                android:text="Client Name"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/title_info_client_id"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_client"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
                 android:gravity="left"
-                android:text="Description"
+                android:text="Client ID:"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/info_task"
-                android:layout_width="match_parent"
+                android:id="@+id/edit_info_client_id"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/info_desc"
+                android:layout_below="@id/edit_info_client"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_client_id"
+                android:gravity="left"
+                android:text="3456787654567"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/title_info_vehicleM"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_info_client_id"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
                 android:gravity="left"
-                android:text="Job"
+                android:text="Vehicle Model:"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/info_assign"
-                android:layout_width="match_parent"
+                android:id="@+id/edit_info_vehicleM"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/info_task"
+                android:layout_below="@id/edit_info_client_id"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_client"
+                android:gravity="left"
+                android:text="Vehicle Model"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/title_info_vehicleC"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_vehicleM"
                 android:layout_marginStart="15dp"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="15dp"
+                android:layout_marginEnd="15dp"
                 android:gravity="left"
-                android:text="Assigned to:"
+                android:text="Vehicle Code:"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/edit_info_vehicleC"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_vehicleM"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_vehicleC"
+                android:gravity="left"
+                android:text="B"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/title_info_no_plate"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_info_vehicleC"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="left"
+                android:text="Number Plate:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
+            <TextView
+                android:id="@+id/edit_info_no_plate"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_vehicleC"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_client"
+                android:gravity="left"
+                android:text="12345676"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+               />
+            <TextView
+                android:id="@+id/title_info_reg_no"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_info_no_plate"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="left"
+                android:text="Registration Number:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edit_info_reg_no"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_no_plate"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_reg_no"
+                android:gravity="left"
+                android:text="12h435h232o"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                 />
+
+            <TextView
+                android:id="@+id/title_info_desc"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_info_reg_no"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="left"
+                android:text="Description:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edit_info_desc"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/title_info_reg_no"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_desc"
+                android:gravity="left"
+                android:text="filler text"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                 />
+
+            <TextView
+                android:id="@+id/title_info_task"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_desc"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="left"
+                android:text="Task:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edit_info_task"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_desc"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/title_info_task"
+                android:gravity="left"
+                android:text="asdfghjkl"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                 />
+
+            <TextView
+                android:id="@+id/title_info_assign"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_task"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="left"
+                android:text="Assign:"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/edit_info_assign"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_info_task"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toEndOf="@id/title_info_assign"
+                android:gravity="left"
+                android:text="employee name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+              />
         </RelativeLayout>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>

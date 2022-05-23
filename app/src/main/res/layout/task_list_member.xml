@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cl_task_card"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_below="@id/tv_username"
+    android:layout_marginTop="30dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="20dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginStart="30dp"
+    android:layout_marginEnd="30dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cyan">
+
+            <TextView
+                android:id="@+id/task_client_tv"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:text="Client: "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/task_assign_tv"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="5dp"
+                android:layout_toEndOf="@+id/task_client_tv"
+                android:text="Assigned to: "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/task_model_tv"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/task_client_tv"
+                android:layout_marginStart="15dp"
+                android:text="Vehicle Model: "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/task_noPlate"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/task_client_tv"
+                android:layout_marginStart="15dp"
+                android:layout_toEndOf="@+id/task_model_tv"
+                android:text="No. Plate: "
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/task_checkbox"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_below="@+id/task_model_tv"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="10dp"
+                android:buttonTint="@color/faded_white"
+                android:paddingStart="10dp"
+                android:text="This is task 1"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

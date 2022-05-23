@@ -147,6 +147,7 @@ public class register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
 
                                 if (task.isSuccessful()) {
+
                                     writeNewUser(admin_reg, dob_reg, department_reg, email_reg, firstName_reg, surname_reg, pass_reg );
                                     Intent intent = new Intent(register.this, admin_dashboard.class);
                                     startActivity(intent);
@@ -181,8 +182,8 @@ public class register extends AppCompatActivity {
 
     public void writeNewUser(String access, String DOB, String department, String email, String first_Name, String surname, String password) {
         Random ran = new Random();
-        int userId = ran.nextInt(50);
-        userData user = new userData(userId, access, email, DOB, department, first_Name, surname, password);
+        int userId = ran.nextInt(100);
+        userData user = new userData( access, email, DOB, department, first_Name, surname, password, userId);
 
         mDatabase.child("users").child(String.valueOf(userId)).setValue(user);
     }

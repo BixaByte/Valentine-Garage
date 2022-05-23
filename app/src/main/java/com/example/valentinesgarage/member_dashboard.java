@@ -17,14 +17,14 @@ public class member_dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_member_dashboard);
 
-        task = findViewById(R.id.btn_taskDashA);
+        task = findViewById(R.id.btn_taskDash);
         logout = findViewById(R.id.btn_logout);
         img = findViewById(R.id.img_pfp);
 
         task.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), tasks.class));
+                startActivity(new Intent(getApplicationContext(), tasks_member.class));
             }
         });
 
