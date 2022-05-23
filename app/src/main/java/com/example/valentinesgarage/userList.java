@@ -2,10 +2,13 @@ package com.example.valentinesgarage;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -21,12 +24,13 @@ public class userList extends AppCompatActivity {
     DatabaseReference database;
     MyAdapter myAdapter;
     ArrayList<userData> list;
+    AppCompatButton addUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_list);
-
+        addUser = findViewById(R.id.btn_add_user);
         recyclerView = findViewById(R.id.userList);
         database = FirebaseDatabase.getInstance().getReference("Users");
         recyclerView.setHasFixedSize(true);
@@ -35,6 +39,8 @@ public class userList extends AppCompatActivity {
         list = new ArrayList<>();
         myAdapter = new MyAdapter(this, list);
         recyclerView.setAdapter(myAdapter);
+
+
 
         database.addValueEventListener(new ValueEventListener() {
             @Override

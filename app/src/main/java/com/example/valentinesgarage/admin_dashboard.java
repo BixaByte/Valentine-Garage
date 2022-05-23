@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class admin_dashboard extends AppCompatActivity {
 
-    private AppCompatButton task, job, report, user, logout;
+    private AppCompatButton task, job, report, user, logout, addUser;
     private ImageButton img;
     private FirebaseAuth mAuth;
 
@@ -26,6 +26,7 @@ public class admin_dashboard extends AppCompatActivity {
         report = findViewById(R.id.btn_reportDashA);
         task = findViewById(R.id.btn_taskDashA);
         logout = findViewById(R.id.btn_logout);
+        addUser = findViewById(R.id.btn_add_user);
         img = findViewById(R.id.img_pfp);
 
         job.setOnClickListener(new View.OnClickListener() {
@@ -63,14 +64,17 @@ public class admin_dashboard extends AppCompatActivity {
             }
         });
 
+        addUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), register.class));
+            }
+        });
+
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mAuth.signOut();
-                Intent intent = new Intent(admin_dashboard.this, login.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(intent);
-                finish();
+                startActivity(new Intent(getApplicationContext(), profile.class));
             }
         });
 

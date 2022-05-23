@@ -47,19 +47,19 @@ public class login extends AppCompatActivity {
         member = findViewById(R.id.rb_member);
         admin = findViewById(R.id.rb_admin);
         login = findViewById(R.id.btn_login);
-        register = findViewById(R.id.btn_register);
+
 
         fAuth = FirebaseAuth.getInstance();
         loader = new ProgressDialog(this);
 
 
-
+/**
                register.setOnClickListener(new View.OnClickListener() {
                    @Override
                    public void onClick(View view) {
                        startActivity(new Intent(getApplicationContext(), register.class));
                    }
-               });
+               });*/
 
                login.setOnClickListener(new View.OnClickListener() {
                    @Override

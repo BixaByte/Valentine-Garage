@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/dark_purple"
     tools:context=".login" >
 
     <RelativeLayout
@@ -172,19 +173,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_register"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/btn_login"
-                    android:layout_alignParentBottom="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:background="@android:color/transparent"
-                    android:text="@string/tv_register"
-                    android:textColor="@color/light_red"
-                    android:textSize="15sp"
-                    android:textStyle="bold" />
+
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
 

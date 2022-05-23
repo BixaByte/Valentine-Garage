@@ -311,11 +311,29 @@
         android:layout_width="120dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/cl_user"
-        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
         android:background="@drawable/red_button"
+
         android:text="@string/btn_logout"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_add_user"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cl_user"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/blue_button"
+        android:text="Add User"
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
